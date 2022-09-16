@@ -4,14 +4,23 @@ int main(){
 
 	int min;
 	int max;
-	int i;  
+	int i;
+      	int j;
+	float frequenz;	
 
 	printf("Bitte geben Sie den geringsten Spannungswert ein : ");
 	scanf("%d",&min);
 	
 	printf("Bitte geben Sie den höchsten Spannungswert ein : ");
 	scanf("%d",&max);
-	printf("Bei einer Periodendauer von 6 Einheiten kriegen Sie folgende Spannungswerte:\n ");
+	
+	printf("Bitte geben Sie die Periodendauer ein : ");
+	scanf("%d",&j);
+	
+	frequenz=1/j;
+
+	printf("Bei einer Periodendauer von %dSekunden und einer Frequenz von %fHz kriegen Sie folgende Spannungswerte:\n ", j, frequenz);
+
 	for( i=0; i < 6; i++){
 		if( i%2 == 0){
 			printf("%dV\n %dV\n %dV\n", min, min, min); }
